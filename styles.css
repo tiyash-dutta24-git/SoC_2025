@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  background-color: white;
+  font-family: Georgia, serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.flag {
+  width: 600px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.stripe {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.red {
+  background-color: red;
+  height: 25%;
+}
+
+.blue {
+  background-color: #1a1a64;
+  height: 50%;
+  position: relative;
+}
+
+.title {
+  color: white;
+  font-size: 42px;
+  font-family: 'Georgia', serif;
+  font-weight: bold;
+}
+
+.circle {
+  width: 110px;
+  height: 110px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle p {
+  font-size: 28px;
+  margin: 0;
+  line-height: 1.4;
+  color: black;
+  font-family: 'Georgia', serif;
+  font-weight: normal;
+  text-align: center;
+}
