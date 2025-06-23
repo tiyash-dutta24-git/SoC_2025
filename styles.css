@@ -1,0 +1,195 @@
+/* Global styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to top right, #004e92, #000428, #00c9ff, #92fe9d);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  background-size: 300% 300%;
+  animation: bgmove 15s ease infinite;
+}
+
+@keyframes bgmove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.container {
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin: 5px 0;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  opacity: 0.6;
+  margin-bottom: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-gap: 20px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Loader 1: Bouncing Dot */
+.loader1::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+  animation: bounce 0.6s infinite alternate;
+}
+@keyframes bounce {
+  0% { transform: translateY(20px); }
+  100% { transform: translateY(-20px); }
+}
+
+/* Loader 2: Three Dots Blink */
+.loader2::before, .loader2::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  animation: blink 1s infinite;
+}
+.loader2::before {
+  left: 25%;
+}
+.loader2::after {
+  right: 25%;
+  animation-delay: 0.5s;
+}
+@keyframes blink {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 1; }
+}
+
+/* Loader 3: Orbiting Dot */
+.loader3::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  animation: orbit 1.2s linear infinite;
+}
+@keyframes orbit {
+  0% { transform: rotate(0deg) translateX(20px); }
+  100% { transform: rotate(360deg) translateX(20px); }
+}
+
+/* Loader 4: Growing Line */
+.loader4::before {
+  content: '';
+  height: 4px;
+  width: 0;
+  background: white;
+  animation: growLine 1s infinite alternate;
+}
+@keyframes growLine {
+  0% { width: 20px; }
+  100% { width: 60px; }
+}
+
+/* Loader 5: Spinner Circle */
+.loader5::before {
+  content: '';
+  width: 30px;
+  height: 30px;
+  border: 4px solid white;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Loader 6: Bars Up & Down */
+.loader6::before, .loader6::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 30px;
+  background: white;
+  animation: bars 0.5s ease-in-out infinite alternate;
+}
+.loader6::after {
+  left: 12px;
+  animation-delay: 0.2s;
+}
+@keyframes bars {
+  0% { height: 10px; }
+  100% { height: 30px; }
+}
+
+/* Loader 7: Pulse Square */
+.loader7::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background: white;
+  animation: pulse 0.8s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.5); opacity: 0.5; }
+}
+
+/* Loader 8: Fade In Out Dot */
+.loader8::before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  background: white;
+  border-radius: 50%;
+  animation: fadeInOut 1s ease-in-out infinite;
+}
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 1; }
+}
+
+/* Loader 9: Shape Morph */
+.loader9::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background: white;
+  animation: morph 1s infinite alternate;
+}
+@keyframes morph {
+  0% { border-radius: 0%; transform: rotate(0deg); }
+  100% { border-radius: 50%; transform: rotate(180deg); }
+}
